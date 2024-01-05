@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Eshwar Conference Registration Form</title>
+    <link rel="stylesheet" href="MyStyle.css">
+    <link rel="script" href="validation.js">
+    <link rel="script" href="result.js">
+<body style="font-family: bahnschrift, sans-serif;font-size: large;">
+    <center><br>
+        <h1><b>SRI ESHWAR CONFERENCE<br>REGISTRATION FORM</b></h1><br>
+        <form name="RegForm" onsubmit="return validateForm()" onsubmit="return  displayResults()" method="get" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th><label for="name">Name : </label></th>
+                <td><input autofocus name="name" id="name" placeholder="Enter Your Name" required ></td>
+            </tr>
+            <tr>
+                <th><label for="email">Email : </label></th>
+                <td><input name="Email" id="email" type="email" required placeholder="Enter email here"></td>
+            </tr>
+            <tr>
+                <th><label for="code" >Country Code : </label></th>
+                <td><input name="country code" id="code" type="text" maxlength="7" value="+91" required></td>
+            </tr>
+            <tr>
+                <th><label for="num" >Number : </label></th>
+                <td><input name="Number " id="num" type="number" minlength="9" maxlength="10"  placeholder="Mobile Number" required></td>
+            </tr>
+            <tr>
+                <th><label for="Cname">Company Name : </label></th>
+                <td><input  name="Company name" id="Cname" placeholder="Company Name" type="text" maxlength="20" required ></td>
+            </tr>
+            <tr>
+                <th><label for="Jname">Job Title : </label></th>
+                <td><input type="text" name="Job" id="Jname" placeholder="Enter Job Title" required ></td>
+            </tr>
+            <tr>
+                <th><label for="gender">Gender : </label></th>
+                <td><input type="radio" name="gender" id="gender" >Male<input type="radio" name="name" id="gender"  >Female </td>
+            </tr>
+            <tr>
+                <th><label for="age">Age : </label></th>
+                <td><input  name="Age" id="age" placeholder="age" type="number" min="18" max="40" required ></td>
+            </tr>
+            <tr>
+                <th><label for="Country">Country : </label></th>
+                <td>
+                    <select name="country" id="Country" required>
+
+                        <option selected disabled>None</option>
+                        
+                        <option>India</option>
+                        <option>Sri Lanka</option>
+                        <option>Palestine</option>
+                        <option>US</option>
+                        <option>Nepal</option>
+                        <option>UAE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="city">City : </label></th>
+                <td><select name="city" id="city" required>
+                    <option selected disabled>None</option>
+                    <optgroup label="Metro">
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Chennai</option>
+                        <option>Cochin</option>
+                        <option>Bangalore</option></option>
+                    <optgroup label="Others">
+                        <option>Coimbatore</option>
+                        <option>Pune</option>
+                        <option>Palghat</option>
+                        
+                        <option>Alapuzha</option> </optgroup>
+                </select></td>
+            </tr>
+            <tr>
+                <th><label for="diet">Dietary Food : </label></th>
+                <td><select name="dieatary" id="diet" required>
+                    <option selected disabled>None</option>
+                    <optgroup label="Veg">
+                        <option>White Rice</option>
+                        <option>Pongal</option>
+                        <option>Veg Biriyani</option>
+                        <option>Poori</option>
+                        <option>Sambhar Sadham</option></option>
+                    <optgroup label="Non-Veg">
+                        <option>Chicken Biriyani</option>
+                        <option>Mandhi Rice</option>
+                        <option>Chicken fried Rice</option>
+                        <option>Grill Chicken</option>
+                        <option>Chicken Shawarma</option> </optgroup>
+                </select></td>
+            </tr>
+           <tr>
+              <th><label for="t shirt">T-shirt size :</label></th>
+              <td>
+                <select id="t shirt" name="T-shirt Size">
+                    <option selected disabled>None</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+              </td>
+           </tr>
+           <tr>
+             <th><label for="color" >Prefered color :</label></th>
+             <td><input name="T shirt Color" id="color" type="color"></td>
+           </tr>
+           <tr>
+            <th><label for="SP" >Session Preference :</label></th>
+            <td>
+                <select id="SP" name="Session Preference">
+                  <option selected disabled>None</option>
+                  <option>Session 1</option>
+                  <option>Session 2</option>
+                  <option>Session 3</option>
+                </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="workshop">WorkShop Preference :</label></th>
+            <td><select name="WorkShop" id="workshop" required>
+                <option selected disabled>None</option>
+                <option>Web Designing</option>
+                <option>Full Stack development</option>
+                <option>Cyber Security</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th><label for="date">Preferred Date :</label></th>
+            <td><input name="Date" id="date" type="date" min="2023-10-13" max="2023-10-15"></td>
+          </tr>
+          <tr>
+            <th><label for="Guest">Will you bring a guest :</label></th>
+            <td><input type="radio" name="Guest" id="Guest" required>Yes<input type="radio" name="Guest" id="Guest" required>No</td>
+          </tr>
+          <tr>
+            <th><label for="GN">Guest Name :</label></th>
+            <td><input name="Guest Name" id="GN" type="text" placeholder="Guest Name "></td>
+          </tr>
+          <tr>
+            <th><label for="diet">Guest Dieatary Food : </label></th>
+            <td><select name="diet" id="diet" required>
+                <option selected disabled>None</option>
+                <optgroup label="Veg">
+                    <option>White Rice</option>
+                    <option>Pongal</option>
+                    <option>Veg Biriyani</option>
+                    <option>Puri</option>
+                    <option>Sambhar Sadham</option></option>
+                <optgroup label="Non-Veg">
+                    <option>Chicken Biriyani</option>
+                    <option>Mandhi Rice</option>
+                    <option>Chicken fried Rice</option>
+                    <option>Grill Chicken</option>
+                    <option>Chicken Shawarma</option> </optgroup>
+            </select></td>
+        </tr>
+        <tr>
+            <th><label for="pay">Prefered payment Method :</label></th>
+            <td><input id="pay" name="Payment Method" type="radio">Credit Card<input id="pay" name="Payment Method" type="radio">Debit Card</td>
+        </tr>
+        <tr>
+            <th><label for="cn">Card Number :</label></th>
+            <td><input name="Card Number" type="password" id="cn" minlength="16" maxlength="16"></td>
+        </tr>
+        <tr>
+            <th><label for="expiryDate">Enter Debit Card Expiry Date (MM/YY):</label>
+               <td><input type="month" id="expiryDate" name="expiryDate" pattern="\d{2}/\d{2}" placeholder="MM/YY" required></td>
+        </tr>
+        <tr>
+            <th><label for="cvv">Card CVV : </label>:</label>
+               <td><input type="password" id="cvv" name="CVV"  placeholder="Enter Card CVV" minlength="3" maxlength="3" required></td>
+        </tr>
+        <tr>
+            <th><label for="Address">Bill Address :</label></th>
+            <td><textarea name="Bill Address" id="Address" placeholder="Enter your address"></textarea></td>
+        </tr>
+        <tr>
+            <th><label for="how">How did you heared about us : </label></th>
+            <td><select name="Heared  in " id="how" required>
+                <option selected disabled>None</option>
+                <option>Friends,Family</option>
+                <option>College</option>
+                <option>Youtube</option>
+                <option>LinkedIn</option>
+                <option>Other</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th><label for="id">Upload photo for ID card :</label></th>
+            <td><Input name="Photo" id="id" type="file" accept=".jpg" required></td>
+        </tr>
+        <tr>
+            <th><label for="ids">Upload profile :</label></th>
+            <td><Input name="Profile" id="ids" type="file" accept=".jpg" required></td>
+        </tr>
+        <tr>
+            <th><label for="comments">Additional comments :</label></th>
+            <td><textarea placeholder="Enter your comments"></textarea></td>
+        </tr>
+        </table>
+        <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        <br>
+        <hr>
+</center>
+<style>
+    body{
+    color:black
+}
+h1{
+    color:deepskyblue
+}
+.button{
+    height: 2rem;
+    border-radius: 2rem;
+}
+</style>
+<script>
+    function validateForm() {
+            var name = document.forms["RegForm"]["name"].value;
+            var email = document.forms["RegForm"]["Email"].value;
+            var countryCode = document.forms["RegForm"]["code"].value;
+            var number = document.forms["RegForm"]["Number"].value;
+            var companyName = document.forms["RegForm"]["Cname"].value;
+            var jobTitle = document.forms["RegForm"]["Jname"].value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var age = document.forms["RegForm"]["age"].value;
+            var country = document.forms["RegForm"]["Country"].value;
+            var city = document.forms["RegForm"]["city"].value;
+            var dietaryFood = document.forms["RegForm"]["dieatary"].value;
+            var tshirtSize = document.forms["RegForm"]["T-shirt Size"].value;
+            var tshirtColor = document.forms["RegForm"]["color"].value;
+            var sessionPreference = document.forms["RegForm"]["SP"].value;
+            var workshopPreference = document.forms["RegForm"]["workshop"].value;
+            var preferredDate = document.forms["RegForm"]["date"].value;
+            var bringGuest = document.querySelector('input[name="Guest"]:checked');
+            var guestName = document.forms["RegForm"]["GN"].value;
+            var guestDietaryFood = document.forms["RegForm"]["diet"].value;
+            var paymentMethod = document.querySelector('input[name="Payment Method"]:checked');
+            var cardNumber = document.forms["RegForm"]["cn"].value;
+            var cardExpiryDate = document.forms["RegForm"]["expiryDate"].value;
+            var cardCVV = document.forms["RegForm"]["cvv"].value;
+            var billAddress = document.forms["RegForm"]["Address"].value;
+            var howHeardAboutUs = document.forms["RegForm"]["how"].value;
+            var photoID = document.forms["RegForm"]["id"].value;
+            var profileID = document.forms["RegForm"]["ids"].value;
+
+            // Validation for each field
+
+            if (name === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email === "" || !email.includes("@")) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            if (countryCode === "" || isNaN(countryCode)) {
+                alert("Please enter a valid country code");
+                return false;
+            }
+
+            if (number === "" || isNaN(number) || number.length !== 10) {
+                alert("Please enter a valid 10-digit phone number");
+                return false;
+            }
+
+            if (companyName === "") {
+                alert("Company Name must be filled out");
+                return false;
+            }
+
+            if (jobTitle === "") {
+                alert("Job Title must be filled out");
+                return false;
+            }
+
+            if (!gender) {
+                alert("Please select a gender");
+                return false;
+            }
+
+            if (age === "" || isNaN(age) || age < 18 || age > 40) {
+                alert("Please enter a valid age between 18 and 40");
+                return false;
+            }
+
+            if (country === "None") {
+                alert("Please select a country");
+                return false;
+            }
+
+            if (city === "None") {
+                alert("Please select a city");
+                return false;
+            }
+
+            if (dietaryFood === "None") {
+                alert("Please select dietary food preference");
+                return false;
+            }
+
+            if (tshirtSize === "None") {
+                alert("Please select a T-shirt size");
+                return false;
+            }
+
+            if (tshirtColor === "") {
+                alert("Please select a T-shirt color");
+                return false;
+            }
+
+            if (sessionPreference === "None") {
+                alert("Please select a session preference");
+                return false;
+            }
+
+            if (workshopPreference === "None") {
+                alert("Please select a workshop preference");
+                return false;
+            }
+
+            if (preferredDate === "" || preferredDate < "2023-10-13" || preferredDate > "2023-10-15") {
+                alert("Please select a valid date between October 13 and October 15, 2023");
+                return false;
+            }
+
+            if (!bringGuest) {
+                alert("Please indicate if you will bring a guest");
+                return false;
+            }
+
+            if (bringGuest && guestName === "") {
+                alert("Please enter the guest name");
+                return false;
+            }
+
+            if (bringGuest && guestDietaryFood === "None") {
+                alert("Please select guest dietary food preference");
+                return false;
+            }
+
+            if (!paymentMethod) {
+                alert("Please select a payment method");
+                return false;
+            }
+
+            if (cardNumber === "" || isNaN(cardNumber) || cardNumber.length !== 16) {
+                alert("Please enter a valid 16-digit card number");
+                return false;
+            }
+
+            if (cardExpiryDate === "" || !cardExpiryDate.match(/^\d{2}\/\d{2}$/)) {
+                alert("Please enter a valid card expiry date in MM/YY format");
+                return false;
+            }
+
+            if (cardCVV === "" || isNaN(cardCVV) || cardCVV.length !== 3) {
+                alert("Please enter a valid 3-digit CVV");
+                return false;
+            }
+
+            if (billAddress === "") {
+                alert("Billing address must be filled out");
+                return false;
+            }
+
+            if (howHeardAboutUs === "None") {
+                alert("Please select how you heard about us");
+                return false;
+            }
+
+            if (photoID === "") {
+                alert("Please upload a photo for the ID card");
+                return false;
+            }
+
+            if (profileID === "") {
+                alert("Please upload a profile photo");
+                return false;
+            }
+
+            // If all validations pass, you can submit the form
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+</script>
+</body>
+</html>
